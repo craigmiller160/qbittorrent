@@ -6,6 +6,14 @@ app-deployment:
       - qbittorrent-config
     ports:
       - 8080
+    volumes:
+      - name: qbittorrent-config-volume
+        type: PVC
+        deploymentMountPath: /config
+      - name: qbittorrent-downloads-volume
+        type: NFS
+        deploymentMountPath: /downloads
+        nfsPath: /
   service:
     enabled: true
     type: ClusterIP
