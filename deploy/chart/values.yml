@@ -2,6 +2,8 @@ app-deployment:
   appName: qbittorrent
   deployment:
     image: nexus-docker-craigmiller160.ddns.nete/qbittorrent:latest
+    configMaps:
+      - qbittorrent-config
     ports:
       - 80
   service:
