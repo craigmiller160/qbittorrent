@@ -13,7 +13,7 @@ app-deployment:
     - name: qbittorrent-downloads-volume
       type: NFS
       deploymentMountPath: /downloads
-      nfsPath: /
+      nfsPath: /nexus-etc
   service:
     enabled: true
     type: ClusterIP
