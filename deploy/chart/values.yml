@@ -11,9 +11,11 @@ app-deployment:
       type: PVC
       deploymentMountPath: /config
     - name: qbittorrent-downloads-volume
-      type: NFS
+      type: PVC
       deploymentMountPath: /downloads
-      nfsPath: /nexus-etc
+#      type: NFS
+#      deploymentMountPath: /downloads
+#      nfsPath: /nexus-etc
   service:
     enabled: true
     type: ClusterIP
