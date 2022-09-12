@@ -5,9 +5,9 @@ app-deployment:
     configMaps:
       - qbittorrent-config
     ports:
-      - 80
+      - 8080
   service:
     enabled: true
     type: ClusterIP
     ports:
-      - containerPort: 80
+      - containerPort: 8080
