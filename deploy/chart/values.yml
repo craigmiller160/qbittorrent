@@ -1,4 +1,11 @@
-appName: qbittorrent
-port: 80
-pvc:
-  name: mongodb-pvc
+app-deployment:
+  appName: qbittorrent
+  deployment:
+    image: nexus-docker-craigmiller160.ddns.nete/qbittorrent:latest
+    ports:
+      - 80
+  service:
+    enabled: true
+    type: ClusterIP
+    ports:
+      - containerPort: 80
