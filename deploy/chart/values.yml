@@ -10,8 +10,8 @@ app-deployment:
     - name: qbittorrent-config-volume
       type: PVC
       deploymentMountPath: /config
-    - name: qbittorrent-downloads-volume
-      type: PVC
+    - name: nfs
+      type: Shared-PVC
       deploymentMountPath: /downloads
 #      type: NFS
 #      deploymentMountPath: /downloads
