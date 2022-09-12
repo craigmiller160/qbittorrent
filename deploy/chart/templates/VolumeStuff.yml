@@ -10,7 +10,7 @@ spec:
     - ReadWriteMany
   nfs:
     server: nfs-server.infra-prod
-    path: "/nexus-etc"
+    path: "/"
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
