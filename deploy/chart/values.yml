@@ -11,9 +11,9 @@ app-deployment:
       type: PVC
       deploymentMountPath: /config
     - name: qbittorrent-data-volume
-      type: PVC
+      type: HostPath
       deploymentMountPath: /downloads
-      className: nfs-csi
+      hostPath: /home/craig/Downloads
   service:
     enabled: true
     type: ClusterIP
