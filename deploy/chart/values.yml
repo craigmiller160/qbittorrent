@@ -15,7 +15,7 @@ app-deployment:
       deploymentMountPath: /downloads
       hostPath: /home/craig/Downloads
   service:
-    enabled: true
+    enable: true
     type: ClusterIP
     ports:
       - containerPort: 8080
