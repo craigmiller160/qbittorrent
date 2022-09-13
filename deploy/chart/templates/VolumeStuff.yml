@@ -1,24 +1,24 @@
-# TODO move this to a separate project
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: nfs
-spec:
-  capacity:
-    storage: 1Mi
-  accessModes:
-    - ReadWriteMany
-  nfs:
-    server: nfs-server.infra-prod
-    path: "/"
----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: nfs
-spec:
-  accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 100Gi
+{{/*# TODO move this to a separate project*/}}
+{{/*apiVersion: v1*/}}
+{{/*kind: PersistentVolume*/}}
+{{/*metadata:*/}}
+{{/*  name: nfs*/}}
+{{/*spec:*/}}
+{{/*  capacity:*/}}
+{{/*    storage: 1Mi*/}}
+{{/*  accessModes:*/}}
+{{/*    - ReadWriteMany*/}}
+{{/*  nfs:*/}}
+{{/*    server: nfs-server.infra-prod*/}}
+{{/*    path: "/"*/}}
+{{/*---*/}}
+{{/*kind: PersistentVolumeClaim*/}}
+{{/*apiVersion: v1*/}}
+{{/*metadata:*/}}
+{{/*  name: nfs*/}}
+{{/*spec:*/}}
+{{/*  accessModes:*/}}
+{{/*    - ReadWriteMany*/}}
+{{/*  resources:*/}}
+{{/*    requests:*/}}
+{{/*      storage: 100Gi*/}}
