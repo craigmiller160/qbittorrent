@@ -13,6 +13,7 @@ app-deployment:
     - name: qbittorrent-data-volume
       type: PVC
       deploymentMountPath: /downloads
+      className: nfs-csi
   service:
     enabled: true
     type: ClusterIP
