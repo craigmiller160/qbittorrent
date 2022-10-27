@@ -1,11 +1,10 @@
 app-deployment:
   appName: qbittorrent
-  deployment:
-    image: nexus-docker-craigmiller160.ddns.nete/qbittorrent:latest
-    configMaps:
-      - qbittorrent-config
-    ports:
-      - 8080
+  image: nexus-docker-craigmiller160.ddns.nete/qbittorrent:latest
+  configMaps:
+    - qbittorrent-config
+  ports:
+    - containerPort: 8080
   volumes:
     - name: qbittorrent-config-volume
       type: PVC
@@ -14,8 +13,3 @@ app-deployment:
       type: HostPath
       deploymentMountPath: /downloads
       hostPath: /home/craig/Downloads
-  service:
-    enable: true
-    type: ClusterIP
-    ports:
-      - containerPort: 8080
