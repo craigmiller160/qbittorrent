@@ -16,6 +16,11 @@ app-deployment:
       type: HostPath
       deploymentMountPath: /downloads
       hostPath: /home/craig/Downloads
+  resources:
+    requests:
+      memory: 1Gi
+    limits:
+      memory: 3Gi
   secure_ingress:
     name: qbittorrent-ingress
     hosts:
