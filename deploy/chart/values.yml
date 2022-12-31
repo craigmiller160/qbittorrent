@@ -1,6 +1,6 @@
 app-deployment:
   appName: qbittorrent
-  image: nexus-docker-craigmiller160.ddns.nete/qbittorrent:latest
+  image: ghcr.io/linuxserver/qbittorrent:4.4.5
   configMaps:
     - qbittorrent-config
   ports:
@@ -13,11 +13,11 @@ app-deployment:
       type: HostPath
       deploymentMountPath: /downloads
       hostPath: /home/craig/Downloads
-secure_ingress:
-  name: qbittorrent-ingress
-  hosts:
-    - name: apps-craigmiller160.ddns.net
-      services:
-        - path: /torrent/?(.*)?
-          serviceName: qbittorrent
-          portNumber: 8080
+  secure_ingress:
+    name: qbittorrent-ingress
+    hosts:
+      - name: apps-craigmiller160.ddns.net
+        services:
+          - path: /torrent/?(.*)?
+            serviceName: qbittorrent
+            portNumber: 8080
