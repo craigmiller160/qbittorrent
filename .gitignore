@@ -2,3 +2,4 @@
 *.iml
 .DS_Store
 deploy/chart/charts
+*.tgz
