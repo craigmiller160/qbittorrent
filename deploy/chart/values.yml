@@ -1,4 +1,4 @@
-app-deployment:
+app_deployment:
   appName: qbittorrent
   image: ghcr.io/linuxserver/qbittorrent:4.4.5
   configMap:
